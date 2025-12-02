@@ -3,14 +3,15 @@
         <!-- Hero Section -->
         <section
             class="relative h-screen flex items-center justify-center bg-gradient-to-br from-primary-900 to-primary-700">
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/hero-bg.jpg')"></div>
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/new_hero_bg.png')">
+            </div>
             <div class="absolute inset-0 bg-black/40"></div>
             <div class="relative z-10 text-center text-white px-4">
-                <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6">
-                    Be Our Guest in Every Season
+                <h1 class="text-6xl md:text-8xl font-serif font-semibold mb-6 tracking-tight leading-tight">
+                    Welcome Home to Every Season
                 </h1>
-                <p class="text-xl md:text-2xl mb-8 font-sans">
-                    A homey getaway nestled in the Endless Mountains
+                <p class="text-xl md:text-2xl mb-8 font-sans font-light tracking-wide">
+                    We've been waiting for you here in the Endless Mountains
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="https://www.opentable.com/r/camelot-restaurant-and-inn-reservations-clarks-summit?restref=1198288"
@@ -52,10 +53,11 @@
                             heart of the Endless Mountains and is conveniently located right off Route 81 (Exit
                             197-Waverly) in Clarks Summit, Pennsylvania.
                         </p>
-                        <router-link to="/contact"
-                            class="inline-block px-6 py-3 border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white rounded-lg font-sans font-semibold transition-colors">
+                        <a href="https://www.google.com/maps/dir//Camelot+Restaurant+and+Inn,+17+Johnson+Rd,+Clarks+Summit,+PA+18411/@41.4849996,-75.7409618,13z"
+                            @click.prevent="openExternal('https://www.google.com/maps/dir//Camelot+Restaurant+and+Inn,+17+Johnson+Rd,+Clarks+Summit,+PA+18411/@41.4849996,-75.7409618,13z')"
+                            class="inline-block px-6 py-3 border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white rounded-lg font-sans font-semibold transition-colors cursor-pointer">
                             Find Us
-                        </router-link>
+                        </a>
                     </div>
                     <div class="rounded-lg h-96 overflow-hidden">
                         <img src="/images/logo.jpg" alt="Camelot Restaurant" class="w-full h-full object-cover">
