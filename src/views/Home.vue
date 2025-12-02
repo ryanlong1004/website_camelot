@@ -204,12 +204,34 @@
                     Check out some reviews from our dear guests
                 </p>
 
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div v-for="review in reviews" :key="review.author" class="bg-white p-6 rounded-lg shadow-sm">
-                        <div class="text-yellow-400 text-2xl mb-3">★★★★★</div>
-                        <p class="text-gray-700 mb-4 italic">"{{ review.text }}"</p>
-                        <p class="font-semibold text-primary-900">— {{ review.author }}</p>
-                        <p class="text-sm text-gray-500">{{ review.source }}</p>
+                <div class="relative group">
+                    <!-- Left Arrow -->
+                    <button @click="scrollReviews('left')"
+                        class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+
+                    <!-- Right Arrow -->
+                    <button @click="scrollReviews('right')"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+
+                    <div ref="reviewsContainer" class="overflow-x-auto pb-4 scroll-smooth"
+                        style="scrollbar-width: thin;">
+                        <div class="flex gap-6 px-4">
+                            <div v-for="review in reviews" :key="review.author"
+                                class="bg-white p-6 rounded-lg shadow-sm w-[400px] flex-shrink-0">
+                                <div class="text-yellow-400 text-2xl mb-3">★★★★★</div>
+                                <p class="text-gray-700 mb-4 italic">"{{ review.text }}"</p>
+                                <p class="font-semibold text-primary-900">— {{ review.author }}</p>
+                                <p class="text-sm text-gray-500">{{ review.source }}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -264,6 +286,7 @@ import NewsSection from '../components/NewsSection.vue'
 import newsData from '../data/news.json'
 
 const email = ref('')
+const reviewsContainer = ref(null)
 
 const reviews = [
     {
@@ -287,6 +310,21 @@ const reviews = [
         source: "OpenTable Review"
     }
 ]
+
+const scrollReviews = (direction) => {
+    const container = reviewsContainer.value
+    if (!container) return
+
+    const scrollAmount = 420 // card width (400) + gap (20)
+    const targetScroll = direction === 'left'
+        ? container.scrollLeft - scrollAmount
+        : container.scrollLeft + scrollAmount
+
+    container.scrollTo({
+        left: targetScroll,
+        behavior: 'smooth'
+    })
+}
 
 const handleNewsletterSubmit = () => {
     alert(`Thank you for subscribing with ${email.value}!`)
