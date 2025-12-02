@@ -29,12 +29,18 @@
                             class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold cursor-pointer">
                             {{ item.link.text }}
                             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 5l7 7-7 7" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                             </svg>
                         </a>
                     </div>
                 </article>
+            </div>
+
+            <div v-if="showViewAll" class="text-center mt-12">
+                <router-link to="/news"
+                    class="inline-block px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-sans font-semibold transition-colors">
+                    View All News
+                </router-link>
             </div>
         </div>
     </section>
@@ -51,6 +57,10 @@ const props = defineProps({
     maxItems: {
         type: Number,
         default: 6
+    },
+    showViewAll: {
+        type: Boolean,
+        default: false
     }
 })
 

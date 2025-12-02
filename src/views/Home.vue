@@ -214,7 +214,7 @@
         </section>
 
         <!-- News & Updates Section -->
-        <NewsSection :news="newsData.news" :max-items="3" />
+        <NewsSection :news="newsData.news" :max-items="3" :show-view-all="true" />
 
         <!-- Newsletter Section -->
         <section class="py-20 px-4">
