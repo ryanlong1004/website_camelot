@@ -3,14 +3,15 @@
         <!-- Hero Section -->
         <section
             class="relative h-screen flex items-center justify-center bg-gradient-to-br from-primary-900 to-primary-700">
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/hero-bg.jpg')"></div>
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/new_hero_bg.png')">
+            </div>
             <div class="absolute inset-0 bg-black/40"></div>
             <div class="relative z-10 text-center text-white px-4">
-                <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6">
-                    Be Our Guest in Every Season
+                <h1 class="text-6xl md:text-8xl font-serif font-semibold mb-6 tracking-tight leading-tight">
+                    Welcome Home to Every Season
                 </h1>
-                <p class="text-xl md:text-2xl mb-8 font-sans">
-                    A homey getaway nestled in the Endless Mountains
+                <p class="text-xl md:text-2xl mb-8 font-sans font-light tracking-wide">
+                    We've been waiting for you here in the Endless Mountains
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="https://www.opentable.com/r/camelot-restaurant-and-inn-reservations-clarks-summit?restref=1198288"
