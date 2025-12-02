@@ -79,6 +79,11 @@
                             </router-link>
                         </li>
                         <li>
+                            <router-link to="/news" class="text-primary-200 hover:text-white transition-colors">
+                                News
+                            </router-link>
+                        </li>
+                        <li>
                             <router-link to="/contact" class="text-primary-200 hover:text-white transition-colors">
                                 Contact Us
                             </router-link>
