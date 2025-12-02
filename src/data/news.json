@@ -1,0 +1,55 @@
+{
+  "announcements": [
+    {
+      "id": "nye-2025",
+      "message": "🎉 New Year's Eve Special Menu Now Available! Reserve your table today.",
+      "priority": "high",
+      "active": true,
+      "link": {
+        "text": "View Menu",
+        "url": "/menus"
+      }
+    }
+  ],
+  "news": [
+    {
+      "id": "nye-menu-2025",
+      "title": "New Year's Eve Celebration Menu",
+      "description": "Ring in 2026 with our exclusive 5-course tasting menu featuring champagne pairings and live music.",
+      "category": "Event",
+      "date": "2025-12-01",
+      "active": true,
+      "image": "/images/hero-bg.jpg",
+      "link": {
+        "text": "Make Reservation",
+        "url": "https://www.opentable.com/r/camelot-restaurant-and-inn-reservations-clarks-summit?restref=1198288"
+      }
+    },
+    {
+      "id": "winter-cocktails",
+      "title": "Winter Cocktail Collection",
+      "description": "Warm up with our new seasonal cocktails featuring spiced rum, hot toddies, and winter-inspired creations.",
+      "category": "Drinks",
+      "date": "2025-11-28",
+      "active": true,
+      "image": "/images/menu-3.jpg",
+      "link": {
+        "text": "See Menu",
+        "url": "/menus"
+      }
+    },
+    {
+      "id": "craft-beer-rotation",
+      "title": "New Draft Selections",
+      "description": "Try our latest craft beer offerings featuring local Pennsylvania breweries and seasonal favorites.",
+      "category": "Drinks",
+      "date": "2025-11-25",
+      "active": true,
+      "image": "/images/menu-2.jpg",
+      "link": {
+        "text": "Visit Us",
+        "url": "/contact"
+      }
+    }
+  ]
+}

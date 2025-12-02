@@ -213,6 +213,9 @@
             </div>
         </section>
 
+        <!-- News & Updates Section -->
+        <NewsSection :news="newsData.news" :max-items="3" />
+
         <!-- Newsletter Section -->
         <section class="py-20 px-4">
             <div class="container mx-auto max-w-2xl text-center">
@@ -255,6 +258,8 @@
 
 <script setup>
 import { ref } from 'vue'
+import NewsSection from '../components/NewsSection.vue'
+import newsData from '../data/news.json'
 
 const email = ref('')
 
