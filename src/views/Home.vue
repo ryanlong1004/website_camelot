@@ -53,10 +53,11 @@
                             heart of the Endless Mountains and is conveniently located right off Route 81 (Exit
                             197-Waverly) in Clarks Summit, Pennsylvania.
                         </p>
-                        <router-link to="/contact"
-                            class="inline-block px-6 py-3 border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white rounded-lg font-sans font-semibold transition-colors">
+                        <a href="https://www.google.com/maps/dir//Camelot+Restaurant+and+Inn,+17+Johnson+Rd,+Clarks+Summit,+PA+18411/@41.4849996,-75.7409618,13z"
+                            @click.prevent="openExternal('https://www.google.com/maps/dir//Camelot+Restaurant+and+Inn,+17+Johnson+Rd,+Clarks+Summit,+PA+18411/@41.4849996,-75.7409618,13z')"
+                            class="inline-block px-6 py-3 border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white rounded-lg font-sans font-semibold transition-colors cursor-pointer">
                             Find Us
-                        </router-link>
+                        </a>
                     </div>
                     <div class="rounded-lg h-96 overflow-hidden">
                         <img src="/images/logo.jpg" alt="Camelot Restaurant" class="w-full h-full object-cover">
