@@ -47,22 +47,27 @@
 
             <!-- Mobile Menu -->
             <transition name="slide">
-                <div v-if="mobileMenuOpen" class="md:hidden py-4 bg-white">
-                    <router-link v-for="link in navLinks" :key="link.path" :to="link.path"
-                        @click="mobileMenuOpen = false"
-                        class="block py-2 text-gray-700 hover:text-primary-600 font-sans font-medium">
-                        {{ link.name }}
-                    </router-link>
-                    <a href="https://via.eviivo.com/CamelotRestaurantInn18411"
-                        @click.prevent="openExternal('https://via.eviivo.com/CamelotRestaurantInn18411')"
-                        class="block py-2 text-gray-700 hover:text-primary-600 font-sans font-medium cursor-pointer">
-                        Inn
-                    </a>
-                    <a href="https://www.opentable.com/r/camelot-restaurant-and-inn-reservations-clarks-summit?restref=1198288"
-                        @click.prevent="openExternal('https://www.opentable.com/r/camelot-restaurant-and-inn-reservations-clarks-summit?restref=1198288')"
-                        class="block mt-2 px-6 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors font-sans font-medium text-center cursor-pointer">
-                        Reserve
-                    </a>
+                <div v-if="mobileMenuOpen"
+                    class="md:hidden fixed top-20 left-0 right-0 bg-primary-800 shadow-xl max-h-[calc(100vh-5rem)] overflow-y-auto">
+                    <div class="py-6 px-4 space-y-1">
+                        <router-link v-for="link in navLinks" :key="link.path" :to="link.path"
+                            @click="mobileMenuOpen = false"
+                            class="block py-3 px-4 text-white hover:bg-primary-700 rounded-lg font-sans font-medium text-lg transition-colors">
+                            {{ link.name }}
+                        </router-link>
+                        <a href="https://via.eviivo.com/CamelotRestaurantInn18411"
+                            @click.prevent="openExternal('https://via.eviivo.com/CamelotRestaurantInn18411'); mobileMenuOpen = false"
+                            class="block py-3 px-4 text-white hover:bg-primary-700 rounded-lg font-sans font-medium text-lg transition-colors cursor-pointer">
+                            Inn
+                        </a>
+                        <div class="pt-4 px-4">
+                            <a href="https://www.opentable.com/r/camelot-restaurant-and-inn-reservations-clarks-summit?restref=1198288"
+                                @click.prevent="openExternal('https://www.opentable.com/r/camelot-restaurant-and-inn-reservations-clarks-summit?restref=1198288'); mobileMenuOpen = false"
+                                class="block py-4 bg-accent-600 hover:bg-accent-700 text-white rounded-lg font-sans font-semibold text-lg text-center transition-colors cursor-pointer shadow-lg">
+                                Reserve a Table
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </transition>
         </div>
@@ -101,14 +106,17 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-.slide-enter-active,
+.slide-enter-active {
+    transition: all 0.3s ease-out;
+}
+
 .slide-leave-active {
-    transition: all 0.3s ease;
+    transition: all 0.25s ease-in;
 }
 
 .slide-enter-from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-20px);
 }
 
 .slide-leave-to {
