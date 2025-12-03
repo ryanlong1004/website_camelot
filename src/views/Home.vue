@@ -3,7 +3,8 @@
         <!-- Hero Section -->
         <section
             class="relative h-screen flex items-center justify-center bg-gradient-to-br from-primary-900 to-primary-700">
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/new_hero_bg.png')">
+            <div class="absolute inset-0 bg-cover bg-center"
+                style="background-image: url('/images/christmas_hero_bg.png')">
             </div>
             <div class="absolute inset-0 bg-black/40"></div>
             <div class="relative z-10 text-center text-white px-4">
